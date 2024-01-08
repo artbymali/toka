@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.Home{
+    background: #020710;
+    background-image: url(bg.png); 
+    background-size: cover ;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+header{
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.Header-conatiner{
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+}
+
+header.scroll {
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: +9999999;
+    transition: background-color 0.2s ease-in-out;;
+}
+
+/* .scroll {
+    background: rgba(0, 0, 0, 0.72);
+    position: fixed;
+    z-index: +9999999;
+    transition: background-color 0.2s ease-in-out;
+  } */
+
+.scroll .Header-conatiner {
+    padding: 10px;
+}
+
+.logo h2{
+    font-family: inter;
+    font-size: 28px;
+    color: white;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+nav ul li a{
+    font-family: inter;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+nav ul li a:hover{
+    color: #31AB84;
+}
+
+menu{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.button button{
+    padding: 8px 25px;
+    background: none;
+    border: 0.8px solid white;
+    border-radius: 40px;
+    color: white;
+    font-family: inter;
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.button button:hover{
+    background: white;
+    color: black;
+}
+
+.Hero-container{
+    padding-top: 120px;
+    /* margin-bottom: 20px; */
+    border-bottom: 2px solid #373D44;
+}
+
+.Hero-content{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 80px;
+    gap: 2rem;
+}
+
+.Hero-content-right{
+    /* width: 48%; */
+    position: relative;
+}
+
+.Hero-content-right .photo{
+    /* max-width: 100%; */
+    width: 650px;
+    /* height: auto; */
+    position: relative;
+    z-index: 2;
+    display: block;
+}
+
+.Hero-content-left h4{
+    font-family: inter; 
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #89FF00;
+    padding-bottom: 20px;
+}
+
+.Hero-content-left h2{
+    color: white;
+    font-family: 'Space Mono', monospace;
+    font-size: 74px;
+    font-weight: 800;
+    line-height: 1.2;
+    padding-bottom: 22px;
+}
+
+.Hero-content-left p{
+    color: 
+    #989DA0;
+    font-family: inter;
+    font-size: 18px;
+    line-height: 1.6;
+    padding-right: 70px;
+    padding-bottom: 35px;
+}
+
+.Hero-content-left button{
+    padding: 15px 25px;
+    background: #89FF00;
+    border-radius: 50px;
+    font-family: inter;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    color: black;
+    cursor: pointer;
+    margin-bottom: 70px;
+    transition: 0.3s ease-in-out;
+}
+
+.Hero-content-left button:hover{
+    background: white;
+    color: black;
+}
+
+.Hero-Tag{
+    display: flex;
+    align-items: center;
+    gap: 5rem
+}
+
+.Hero-Tag-left{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Hero-Tag-left img{
+    width: 65px;
+}
+
+.Hero-Tag-left-content{
+    display: flex;
+    flex-direction: column;
+    line-height: 22px;
+}
+
+.Hero-Tag-left-content h4{
+    font-family: space Mono;
+    font-size: 40px;
+    color: white;
+}
+
+.Hero-Tag-left-content span{
+    color: #989DA0;
+    text-transform: uppercase;
+    font-family: inter;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.Hero-Tag-right{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Hero-Tag-right img{
+    width: 65px;
+}
+
+.Hero-Tag-right-content{
+    display: flex;
+    flex-direction: column;
+    line-height: 25px;
+}
+
+.Hero-Tag-right-content h4{
+    font-family: space Mono;
+    font-size: 40px;
+    color: white;
+}
+
+.Hero-Tag-right-content span{
+    color: #989DA0;
+    text-transform: uppercase;
+    font-family: inter;
+    font-weight: 600;
+    font-size: 14px;
+    /* letter-spacing: 1px; */
+}
+
+.bg-line img{
+    display: block;
+    position: absolute;
+    top: 280px;
+    right: -50px;
+    width: 450px;
+    z-index: 1;
+}
+
+
+.cricle img{
+    position: absolute;
+    top: -70px;
+    right: 80px;
+    width: 100px;
+    transform: translate(50%, 50%);
+    animation: animate 8.5s infinite linear;
+}
+
+@keyframes animate{
+    0%{
+        transform: translate(50%, 50%) rotate(0deg);
+    }
+
+    90%{
+        transform: translate(50%, 50%) rotate(360deg);
+    }
+}
+
+.Scroller{
+    width: 100%;
+    background: #020710;
+}
+
+.Scroller__container{
+    max-width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Scroller__inner{
+    border: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 30px;
+    flex-wrap: wrap;
+    /* gap: 5rem; */
+}
+
+
+.Scroller__inner .All__same__1{
+    padding-left: 5rem;
+    width: 220px;
+    opacity: 0.8;
+}
+
+.Scroller__inner .All__same__2{
+    padding-left: 5rem;
+    width: 200px;
+    opacity: 0.8;
+}
+
+.Scroller__container[data-animated=true] {
+    overflow: hidden;
+}
+
+.Scroller__container[data-animated=true] .Scroller__inner{
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 2.5rem));
+    }
+}
