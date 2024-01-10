@@ -324,3 +324,94 @@ menu{
         transform: translate(calc(-50% - 2.5rem));
     }
 }
+
+/* ----about---- */
+
+.About{
+    width: 100%;
+    background: #020710;
+}
+
+.About-container{
+    width: 86%;
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+.About-content{
+    display: flex;
+    padding-top: 100px;
+}
+
+.About-content-left{
+    background: url(bacilnes.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+    width: 50%;
+    /* background: #33ffbe; */
+}
+
+.About-content-left-content img{
+    width: 100%;
+    width: 500px;
+    max-width: 100%; 
+    height: auto;
+    /* background: gray; */
+}
+
+.About-content-right{
+    width: 50%;
+    padding: 120px 10px 0 10px;
+    margin: 0 0 0 40px;
+}
+
+.About-content-right-content img{
+    position: absolute;
+    width: 50px;
+    top: 20px;
+    right: 0;
+}
+
+.About-content-right-content h4{
+    font-family: inter;
+    font-size: 15px;
+    color: #89FF00;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.About-content-right-content h2{
+    font-family: space mono;
+    font-size: 50px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.About-content-right-content p{
+    font-family: inter;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #989DA0;
+    padding-bottom: 30px;
+}
+
+.About-content-right-content button{
+    padding: 14px 28px;
+    border-radius: 50px;
+    border: none;
+    font-family: inter;
+    font-weight: 600;
+    font-size: 16px;
+    background: #89FF00;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.About-content-right-content button:hover{
+    background: white;
+}
