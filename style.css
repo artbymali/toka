@@ -332,40 +332,55 @@ menu {
 .About-container {
   width: 86%;
   margin: auto;
-  padding-bottom: 100px;
 }
 
 .About-content {
   display: flex;
-  padding-top: 100px;
-  overflow: hidden;
+  padding-top: 80px;
+  position: relative;
 }
 
 .About-content-left {
-  background: url(bacilnes.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* width: 50%; */
+  flex: 1;
+  display: flex;
   position: relative;
-  width: 50%;
+}
+
+.About-content-overlay {
+  background: url(bacilnes.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* width: 50%; */
 }
 
 .About-content-left-content img {
   width: 100%;
   height: auto;
-  position: absolute;
-  top: -50px;
+  z-index: 2;
+  position: relative;
+  /* top: 5px; */
+  bottom: -5px;
 }
 
 .About-content-right {
-  width: 50%;
-  padding: 120px 10px 0 10px;
-  margin: 0 0 0 40px;
+  /* width: 50%; */
+  flex: 1;
+  padding: 160px 10px 0 10px;
+  margin: 0 0 0 70px;
 }
 
 .About-content-right-content img {
   position: absolute;
-  width: 50px;
-  top: 20px;
+  width: 60px;
+  top: 50px;
   right: 0;
 }
 
@@ -389,19 +404,19 @@ menu {
 
 .About-content-right-content p {
   font-family: inter;
-  font-size: 18px;
-  line-height: 1.8;
-  color: #989da0;
+  font-size: 20px;
+  line-height: 1.9;
+  color: #a4a9ac;
   padding-bottom: 30px;
 }
 
 .About-content-right-content button {
-  padding: 14px 28px;
+  padding: 15px 28px;
   border-radius: 50px;
   border: none;
   font-family: inter;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   background: #89ff00;
   cursor: pointer;
   transition: 0.3s ease-in-out;
@@ -409,4 +424,461 @@ menu {
 
 .About-content-right-content button:hover {
   background: white;
+}
+
+/* ---Games--- */
+
+.Games {
+  width: 100%;
+  background: #020710;
+}
+
+.Games-container {
+  width: 86%;
+  margin: auto;
+  padding-bottom: 100px;
+}
+
+.Games-content {
+  display: flex;
+  padding-top: 80px;
+  position: relative;
+}
+
+.Games-content-left {
+  flex: 1;
+  display: flex;
+  position: relative;
+  padding: 140px 10px 0 10px;
+  margin: 0 70px 0 0;
+}
+
+
+.Games-content-left-content h4 {
+  font-family: inter;
+  font-size: 15px;
+  color: #89FF00;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  padding-bottom: 10px;
+}
+
+.Games-content-left-content h2 {
+  font-family: space mono;
+  font-size: 45px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: white;
+  padding-bottom: 20px;
+}
+
+.Games-content-left-content p {
+  font-family: inter;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #A4A9AC;
+  padding-bottom: 30px
+}
+
+.Games-content-left-content .Discover-more {
+  display: flex;
+  color: #89FF00;
+  cursor: pointer;
+  gap: 3px;
+  position: relative;
+  width: max-content;
+  transition: 0.2s ease-in-out;
+}
+
+.Games-content-left-content .Discover-more h4 {
+  text-transform: none;
+  font-size: 16px;
+}
+
+.Games-content-left-content .Discover-more::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 120px;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0.7);
+  transform-origin: left;
+  transition: 0.2s ease-in-out;
+}
+
+.Games-content-left-content .Discover-more:hover:after {
+  transform: scaleX(1);
+}
+
+.Games-content-left-content .Discover-more h4 {
+  padding-bottom: 0;
+}
+
+.Games-content-right {
+  flex: 1.1;
+  display: flex;
+  position: relative;
+}
+
+.Games-contetnt-overlay {
+  background: url(Am_bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.Games-content-right-content img {
+  width: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+.Games-content-right-content .Game_icon {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  width: 230px;
+  transform: rotate(30deg);
+}
+
+.Games-content-right-content .Text_star {
+  position: absolute;
+  left: -80px;
+  width: 100px;
+  transform: translate(50%, 50%);
+  animation: animate 8.5s infinite linear;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(50%, 50%) rotate(0deg);
+  }
+
+  90% {
+    transform: translate(50%, 50%) rotate(360deg);
+  }
+}
+
+/* ---collection--- */
+
+.Collection {
+  width: 100%;
+  background: #020710;
+}
+
+.Collection-container {
+  width: 88%;
+  margin: auto;
+  background: #B6fb44;
+  border-radius: 25px;
+  background-image: url(cricle-lines.png);
+  background-position: 100% -17px;
+  background-size: 330px auto;
+  background-repeat: no-repeat;
+  z-index: 1;
+  position: relative;
+}
+
+.Collection-content {
+  display: flex;
+  align-items: center;
+  padding: 70px 90px 70px 90px;
+}
+
+.Collection-content-left {
+  width: 75%;
+}
+
+.Collection-content-left h2 {
+  font-size: 42px;
+  font-family: space Grotesk;
+  padding-bottom: 20px;
+  cursor: text;
+}
+
+.Collection-content-left h2 a {
+  position: relative;
+  color: black;
+  text-decoration: none;
+}
+
+.Collection-content-left h2 a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 7px;
+  bottom: 8px;
+  z-index: -1;
+  background-color: white;
+  transition: 0.2s ease-in-out;
+}
+
+.Collection-content-left h2 a:hover::after {
+  height: 35px;
+}
+
+.Collection-content-left p {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.Collection-content-right {
+  width: 23%;
+  text-align: right;
+  z-index: +1;
+}
+
+.Collection-content-right button {
+  text-align: right;
+  padding: 15px 25px;
+  background: #020710;
+  color: #B6fb44;
+  font-family: space Grotesk;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.Collection-content-right button:hover {
+  background: white;
+  color: black;
+}
+
+/* ---Testimonial--- */
+
+.Testimonial {
+  width: 100%;
+  background: #020710;
+  background: url(ricuthc.png);
+  background-size: cover;
+}
+
+.Testimonial-container {
+  width: 87%;
+  margin: auto;
+  padding-top: 150px;
+  padding-bottom: 100px;
+
+}
+
+.Testimonial-content {
+  display: flex;
+}
+
+.Testimonial-content-left {
+  width: 50%;
+}
+
+.Testimonial-content-left h3 {
+  font-family: inter;
+  letter-spacing: 1.2px;
+  color: #89FF00;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+.Testimonial-content-left h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 45px;
+  color: white;
+}
+
+.Testimonial-content-right {
+  width: 50%;
+  position: relative;
+}
+
+.Testimonial-content-right-wrapper {
+  /* position: relative; */
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+
+.Testimonial-content-right-item-stars i {
+  color: yellow;
+  padding: 0 2px;
+}
+
+.Testimonial-content-right-item-stars {
+  padding-bottom: 50px;
+}
+
+.Testimonial-content-right-item p {
+  font-size: 22px;
+  font-family: space Grotesk;
+  color: #848296;
+  line-height: 1.5;
+  padding-bottom: 20px;
+}
+
+.Testimonial-content-right-item-detal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Testimonial-content-right-item-detal-name h3 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+.Testimonial-content-right-item-detal-name p {
+  font-size: 18px;
+  font-family: inter;
+}
+
+.Testimonial-content-right-item-detal-image img {
+  width: 50px;
+  border-radius: 50px;
+}
+
+.Testimonial-content-right-wrapper {
+  display: flex;
+  overflow: hidden;
+}
+
+.Testimonial-content-right-item {
+  width: 100%;
+}
+
+.Testimonial-button {
+  /* background: white; */
+  position: absolute;
+  right: 30px;
+  top: 0%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.Testimonial-button-left {
+  background: #373d44;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.Testimonial-button-right {
+  background: #373d44;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.Testimonial-button i {
+  font-size: 18px;
+  /* width: 50px; */
+  color: white;
+}
+
+.Testimonial{
+  background: #020710;
+}
+
+.swiper-slide-container {
+  width: 87%;
+  margin: auto;
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide-content {
+  display: flex;
+}
+
+.swiper-slide-content-left {
+  width: 50%;
+}
+
+.swiper-slide-content-left h3 {
+  font-family: inter;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  color: #89FF00;
+  padding-bottom: 5px;
+  letter-spacing: 1.2px;
+}
+
+.swiper-slide-content-left h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+  color: white;
+}
+
+.swiper-slide-content-right {
+  width: 50%;
+  position: relative;
+}
+
+.swiper-slide-stars {
+  padding-bottom: 50px;
+}
+
+.swiper-slide-stars i {
+  color: yellow;
+  padding: 0 2px;
+  font-size: 20px;
+}
+
+.swiper-slide p {
+  font-size: 22px;
+  font-family: space Grotesk;
+  color: #848296;
+  line-height: 1.5;
+  padding-bottom: 20px;
+}
+
+.swiper-slide-detal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.swiper-slide-detal-name h3 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.swiper-slide-detal-name p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.swiper-slide-detal-image img {
+  width: 50%;
+  border-radius: 50px;
 }

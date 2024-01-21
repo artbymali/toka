@@ -21,24 +21,46 @@ window.addEventListener("scroll", throttleScroll);
 menu.style.transition = 'background-color 0.3s ease'; 
 
 
+
+
+
+
 const scrollers = document.querySelectorAll(".Scroller__container");
 
-if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     addAnimation();
 }
 
 function addAnimation() {
-    scrollers.forEach((Scroller) => {
-        Scroller.setAttribute("data-animated", true);
-        
-         const scrollerInner = scroller.querySelectorAll(".Scroller__inner");
-         const scrollercontent = Array.from(scrollerInner.children);
+    scrollers.forEach((scroller) => {
+        scroller.setAttribute("data-animated", true);
 
-         scrollercontent.forEach(item => {
+        const scrollerInner = scroller.querySelector(".Scroller__inner");
+        const scrollerContent = Array.from(scrollerInner.children);
+
+        const fragment = document.createDocumentFragment();
+
+        scrollerContent.forEach((item) => {
             const duplicatedItem = item.cloneNode(true);
-            console.log(duplicatedItem);
             duplicatedItem.setAttribute("aria-hidden", true);
-            scrollerInner.appendChild(duplicatedItem);
-         })
-    })
+            fragment.appendChild(duplicatedItem);
+        });
+
+        scrollerInner.appendChild(fragment);
+    });
 }
+
+
+var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },grabCursor: true,
+  });
