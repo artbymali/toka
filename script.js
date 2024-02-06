@@ -64,3 +64,26 @@ var swiper = new Swiper(".mySwiper", {
       clickable: true,
     },grabCursor: true,
   });
+
+
+
+const faqs = document.querySelectorAll('.tab');
+
+faqs.forEach(tab => {
+    const icon = tab.querySelector('.icon');
+    const answer = tab.querySelector('.answer');
+
+    // Remove 'active' class from answer initially
+    answer.classList.remove('active');
+
+    tab.addEventListener('click', () => {
+        icon.classList.toggle('active');
+        answer.classList.toggle('active');
+
+        if (icon.classList.contains('active')) {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+        } else {
+            answer.style.maxHeight = null;
+        }
+    });
+});
